@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 import inquirer from "inquirer";
-import { execSync } from "child_process";
+import degit from "degit";
 import chalk from "chalk";
 import path from "path";
-import fs from "fs";
 import { fileURLToPath } from "url";
+import fs from "fs-extra";
 
-// Get the current directory (since `import.meta` doesn't provide __dirname)
+// Get current directory
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -26,16 +26,17 @@ async function createProject() {
 
   const projectPath = path.join(process.cwd(), projectName);
 
-  // Clone template into the specified directory
   console.log(chalk.blue(`\nCreating project: ${chalk.bold(projectName)}...\n`));
-  execSync(`git clone https://github.com/swapnesh839/swapnesh_io_node_ts_template.git ${projectName}`, { stdio: "inherit" });
 
-  // Remove `.git` to prevent Git history cloning
-  fs.rmSync(path.join(projectPath, ".git"), { recursive: true, force: true });
+  // Clone only the `template` folder from GitHub using degit
+  const repo = "your-username/your-repo/template"; // Adjust the path if necessary
+  const emitter = degit(repo, { cache: false, force: true });
+
+  await emitter.clone(projectPath);
 
   console.log(chalk.green("\nSetup complete! 🎉"));
   console.log(`\nRun the following commands:\n`);
-  console.log(chalk.cyan(`cd ${projectName} && yarn && yarn devt`));
+  console.log(chalk.cyan(`cd ${projectName} && npm install && npm start`));
 }
 
 createProject();
