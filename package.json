@@ -1,0 +1,35 @@
+{
+  "name": "swapnesh_io_node_ts_template",
+  "version": "1.0.0",
+  "description": "A CLI to generate a Node.js Express TypeScript app",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swapnesh839/swapnesh_io_node_ts_template.git"
+  },
+  "bin": {
+    "create-node-express-ts": "bin/execute.js"
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "Swapnesh Panda",
+    "url": "https://github.com/swapnesh839/swapnesh_io_node_ts_template.git"
+  },
+  "contributors": [
+    "swapnesh839"
+  ],
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "inquirer": "^12.4.1",
+    "typescript": "^5.7.3"
+  }
+}
