@@ -6,7 +6,6 @@ A CLI tool to generate a **Node.js Express TypeScript** application with best pr
 - **TypeScript support**
 - Pre-configured **ESLint** & **Prettier**
 - `dotenv` for environment variables
-- **Nodemon** for live reload during development
 - Organized folder structure
 - **CLI-based project setup**
 - **AGPL-3.0 Licensed**
