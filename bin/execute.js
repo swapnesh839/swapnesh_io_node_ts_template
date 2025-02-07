@@ -20,7 +20,7 @@ async function createProject() {
       type: "input",
       name: "projectName",
       message: "Enter your project name:",
-      default: "my-express-app",
+      default: "my-node-ts-app",
     },
   ]);
 
@@ -29,7 +29,7 @@ async function createProject() {
   console.log(chalk.blue(`\nCreating project: ${chalk.bold(projectName)}...\n`));
 
   // Clone only the `template` folder from GitHub using degit
-  const repo = "your-username/your-repo/template"; // Adjust the path if necessary
+  const repo = "https://github.com/swapnesh839/swapnesh_io_node_ts_template.git/template"; // Adjust the path if necessary
   const emitter = degit(repo, { cache: false, force: true });
 
   await emitter.clone(projectPath);
