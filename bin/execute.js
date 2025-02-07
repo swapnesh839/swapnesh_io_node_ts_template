@@ -36,7 +36,7 @@ async function createProject() {
 
   console.log(chalk.green("\nSetup complete! 🎉"));
   console.log(`\nRun the following commands:\n`);
-  console.log(chalk.cyan(`cd ${projectName} && npm install && npm start`));
+  console.log(chalk.cyan(`cd ${projectName} && yarn && yarn dev`));
 }
 
 createProject();

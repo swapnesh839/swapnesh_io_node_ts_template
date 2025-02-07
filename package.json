@@ -1,5 +1,5 @@
 {
-  "name": "swapnesh_io_node_ts_template",
+  "name": "@swapneshio/node-ts-template",
   "version": "1.0.0",
   "description": "A CLI to generate a Node.js Express TypeScript app",
   "main": "index.js",
@@ -16,7 +16,7 @@
     "url": "https://github.com/swapnesh839/swapnesh_io_node_ts_template.git"
   },
   "bin": {
-    "create-node-express-ts": "bin/execute.js"
+    "node-ts-template": "bin/execute.js"
   },
   "bugs": "",
   "keywords": [],
