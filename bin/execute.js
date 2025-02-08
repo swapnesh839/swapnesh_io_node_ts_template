@@ -23,6 +23,7 @@ async function createProject() {
       default: "my-node-ts-app",
     },
   ]);
+  
 
   const projectPath = path.join(process.cwd(), projectName);
 
@@ -33,6 +34,12 @@ async function createProject() {
   const emitter = degit(repo, { cache: false, force: true });
 
   await emitter.clone(projectPath);
+  const packageJsonPath = path.join(projectPath, "package.json");
+  if (fs.existsSync(packageJsonPath)) {
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+    packageJson.name = projectName;
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+  }
 
   console.log(chalk.green("\nSetup complete! 🎉"));
   console.log(`\nRun the following commands:\n`);
