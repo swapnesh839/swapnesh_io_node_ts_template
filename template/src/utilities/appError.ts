@@ -81,15 +81,15 @@ class JwtInvalidError extends AppError {
 
 export {
   AppError,
-  ValidationError,
-  NotFoundError,
-  UnauthorizedError,
-  ForbiddenError,
-  RateLimiterError,
-  JwtExpiredError,
   BadRequestError,
-  InternalServerError,
   CastError,
   DuplicateFieldError,
+  ForbiddenError,
+  InternalServerError,
+  JwtExpiredError,
   JwtInvalidError,
+  NotFoundError,
+  RateLimiterError,
+  UnauthorizedError,
+  ValidationError,
 };

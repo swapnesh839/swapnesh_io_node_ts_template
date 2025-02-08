@@ -1,4 +1,5 @@
 import jwt, { JwtPayload } from "jsonwebtoken";
+
 import envConfig from "../config/env.config.js";
 import { BadRequestError, JwtExpiredError } from "../utilities/appError.js";
 

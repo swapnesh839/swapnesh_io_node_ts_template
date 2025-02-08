@@ -1,22 +1,27 @@
-
-import express, { Request, Response as ExpressResponse } from "express";
-
-import { createServer } from "http";
-import cors from "cors";
 import cookieParser from "cookie-parser";
+import cors from "cors";
+import express, { Request, Response as ExpressResponse } from "express";
 import mongoSanitize from "express-mongo-sanitize";
-
+import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
+
+import envConfig from "./config/env.config.js";
+import RootRouter from "./routes/routes.js";
+// import connectDB from "./config/db.config.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-import RootRouter from "./routes/routes.js";
-import envConfig from "./config/env.config.js";
+
 const app = express();
 const server = createServer(app);
+// db connection
+// const initialize = () => {
+//  connectDB();
+// };
+// initialize();
 
 app.use(
   cors({

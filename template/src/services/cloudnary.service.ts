@@ -1,8 +1,9 @@
 import type {
-  UploadApiResponse,
-  UploadApiOptions,
   DeleteApiResponse,
+  UploadApiOptions,
+  UploadApiResponse,
 } from "cloudinary";
+
 import cloudinary from "../config/cloudnary.config.js";
 
 export const uploadImage = async (

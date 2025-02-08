@@ -25,12 +25,12 @@
     "dev": "tsc-watch --noClear --onSuccess \"node ./dist/server.js\"",
     "lint": "eslint . --fix",
     "format": "prettier --write .",
-    "check": "yarn lint && yarn format",
-    "build": "yarn check && tsc",
+    "build": "tsc",
     "deploy": "yarn && yarn build && yarn start"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.741.0",
+    "bcryptjs": "^2.4.3",
     "cloudinary": "^2.5.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
@@ -44,6 +44,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/cookie-parser": "^1.4.8",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
@@ -54,7 +55,10 @@
     "@typescript-eslint/parser": "^8.23.0",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-tsdoc": "^0.4.0",
     "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
     "tsc-watch": "^6.2.1",

@@ -1,12 +1,11 @@
-import { Response } from "express";
-
 declare global {
   namespace Express {
     interface Response {
+      created: (data: any, message?: string) => void;
       badRequest: (message?: string) => void;
     }
     interface Request {
-      user?:IUser
+      user?: IUser;
       // user?: {
       //   name: string;
       //   email: string;
@@ -15,3 +14,5 @@ declare global {
     }
   }
 }
+
+export {};

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 import envConfig from "./env.config.js";
 const connectDB = async () => {
   if (mongoose.connection.readyState === 1) {

@@ -2,7 +2,7 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.validate": ["javascript", "typescript", "typescriptreact"],
   "editor.codeLens": true,
@@ -13,5 +13,8 @@
     "strings": true
   },
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.hover.enabled": true
+  "editor.hover.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
