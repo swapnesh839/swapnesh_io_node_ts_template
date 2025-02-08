@@ -101,7 +101,6 @@ yarn deploy
 | `yarn dev`         | Run the server in development mode          |
 | `yarn lint`        | Run ESLint checks and auto-fix issues       |
 | `yarn format`      | Format code using Prettier                  |
-| `yarn check`       | Run both lint and format checks             |
 | `yarn build`       | Compile TypeScript to JavaScript            |
 | `yarn deploy`      | Install dependencies, build, and start      |
 
