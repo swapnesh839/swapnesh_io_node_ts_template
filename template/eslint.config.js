@@ -14,19 +14,18 @@ export default [
       "@typescript-eslint": ts,
       prettier,
       tsdoc,
-      "import": importPlugin,
+      import: importPlugin,
       "simple-import-sort": simpleImportSort,
     },
     rules: {
       "@typescript-eslint/no-unused-vars": [
         "error",
-        { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
-      ]
-      ,
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
       "no-console": "warn",
-      "quotes": ["error", "double"],
+      quotes: ["error", "double"],
       "simple-import-sort/imports": "warn",
       "simple-import-sort/exports": "warn",
-    }
+    },
   },
 ];
