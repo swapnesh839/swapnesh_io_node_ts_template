@@ -5,7 +5,6 @@ A CLI tool to generate a **Node.js Express TypeScript** application with best pr
 ## 🚀 Features
 
 - **TypeScript support**
--
 - Pre-configured **ESLint** & **Prettier**
 - `dotenv` for environment variables
 - Organized folder structure
@@ -29,6 +28,28 @@ npx @swapneshio/node-ts-template my-project
 ```
 
 This will generate a new project inside the `my-project` folder.
+
+### **Global Installation**
+
+You can also install the package globally and use it directly:
+
+#### **Using Yarn**
+
+```sh
+yarn global add @swapneshio/node-ts-template
+```
+
+#### **Using npm**
+
+```sh
+npm install -g @swapneshio/node-ts-template
+```
+
+Then create a new project with:
+
+```sh
+@swapneshio/node-ts-template my-project
+```
 
 ---
 
@@ -64,7 +85,7 @@ yarn build
 yarn start
 ```
 
-### **Deploy Application (this is the comand when you want to deploy)**
+### **Deploy Application**
 
 ```sh
 yarn deploy
@@ -74,16 +95,14 @@ yarn deploy
 
 ## 🔧 Scripts
 
-| Command            | Description |
-
-|--------------------|-------------|
-| `yarn start`      | Start the production server |
-| `yarn dev`        | Run the server in development mode with TypeScript watch mode |
-| `yarn lint`       | Run ESLint checks and auto-fix issues |
-| `yarn format`     | Format code using Prettier |
-| `yarn check`      | Run both lint and format checks |
-| `yarn build`      | Lint, format, and compile TypeScript to JavaScript |
-| `yarn deploy`     | Install dependencies, build, and start the project |
+| Command            | Description                                 |
+|--------------------|---------------------------------------------|
+| `yarn start`       | Start the production server                 |
+| `yarn dev`         | Run the server in development mode          |
+| `yarn lint`        | Run ESLint checks and auto-fix issues       |
+| `yarn format`      | Format code using Prettier                  |
+| `yarn build`       | Compile TypeScript to JavaScript            |
+| `yarn deploy`      | Install dependencies, build, and start      |
 
 ---
 
@@ -124,3 +143,4 @@ Contributions are welcome! Feel free to fork and create pull requests.
 ## 💡 Need Help?
 
 For issues, open a ticket on GitHub or contact me.
+
