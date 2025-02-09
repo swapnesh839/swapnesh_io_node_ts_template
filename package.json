@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "A CLI to generate a Node.js Express TypeScript app",
   "main": "./bin/execute.js",
+  "main": "./bin/execute.js",
   "type": "module",
   "publishConfig": {
     "access": "public"
