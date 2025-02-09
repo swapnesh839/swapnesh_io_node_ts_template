@@ -8,13 +8,14 @@ export const signUpController = async (
   req: Request,
   res: Response,
   next: NextFunction,
-): Promise<any> => {
+): Promise<void> => {
   try {
     const { name, phone, email, password, userType } = req.body;
 
     const existingUser = await UserModel.findOne({ email, userType }).lean();
     if (existingUser) {
-      return res.status(400).json({ message: "User already exists" });
+      res.status(400).json({ message: "User already exists" });
+      return;
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -38,17 +39,19 @@ export const signInController = async (
   req: Request,
   res: Response,
   next: NextFunction,
-): Promise<any> => {
+): Promise<void> => {
   try {
     const { email, password, userType } = req.body;
     const user = await UserModel.findOne({ email, userType }).lean();
     if (!user) {
-      return res.status(400).json({ message: "User not found" });
+      res.status(400).json({ message: "User not found" });
+      return;
     }
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      return res.status(400).json({ message: "Invalid password" });
+      res.status(400).json({ message: "Invalid password" });
+      return;
     }
     const { password: _, ...userWithoutPassword } = user;
 
