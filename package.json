@@ -1,6 +1,6 @@
 {
   "name": "node-ts-template-trial",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI to generate a Node.js Express TypeScript app",
   "main": "./bin/execute.js",
   "type": "module",
