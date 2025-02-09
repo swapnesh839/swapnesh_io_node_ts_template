@@ -1,6 +1,6 @@
 {
-  "name": "@swapneshio/node-ts-template",
-  "version": "1.0.0",
+  "name": "node-ts-template-trial",
+  "version": "1.0.1",
   "description": "A CLI to generate a Node.js Express TypeScript app",
   "main": "./bin/execute.js",
   "type": "module",
@@ -19,15 +19,16 @@
     "url": "https://github.com/swapnesh839/swapnesh_io_node_ts_template.git"
   },
   "bin": {
-    "node-ts-template": "bin/execute.js"
+    "node-ts-template-trial": "bin/execute.js"
   },
-  "bugs": {
+ "bugs": {
   "url": "https://github.com/swapnesh839/swapnesh_io_node_ts_template/issues"
-},
+}
+,
   "keywords": [],
   "author": {
     "name": "Swapnesh Panda",
-    "url": "https://github.com/swapnesh839/swapnesh_io_node_ts_template.git"
+    "url": "https://github.com/swapnesh839"
   },
   "contributors": [
     "swapnesh839"
