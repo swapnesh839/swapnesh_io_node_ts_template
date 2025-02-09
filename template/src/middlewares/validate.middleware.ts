@@ -1,4 +1,4 @@
-import { NextFunction,Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { ZodError, ZodSchema } from "zod";
 
 import { ValidationError } from "../utilities/appError.js";
@@ -9,10 +9,14 @@ export const validateRequest = (schemas: {
   params?: ZodSchema;
   query?: ZodSchema;
 }) => {
-  return async (req: Request, res: Response, next: NextFunction):Promise<void> => {
+  return async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
     try {
       if (schemas.body) {
-     await schemas.body.parseAsync(req.body);
+        await schemas.body.parseAsync(req.body);
       }
 
       // Validate params
@@ -29,11 +33,10 @@ export const validateRequest = (schemas: {
     } catch (error) {
       if (error instanceof ZodError) {
         const validationMessages = error.errors.map((err) => err.message);
-        next(new ValidationError(validationMessages,validationMessages[0]));
+        next(new ValidationError(validationMessages, validationMessages[0]));
       } else {
         next(error);
       }
     }
   };
 };
-
