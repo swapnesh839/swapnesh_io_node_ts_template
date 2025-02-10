@@ -12,7 +12,7 @@ A CLI tool to generate a **Node.js Express TypeScript** application with best pr
 - **AGPL-3.0 Licensed**
 - **Built-in AWS & Cloudinary Setup**
 - **Token-based authentication**
-- **Error Handling with Zod**
+- **Initial setup for Zod validation**
 - **Centralized error handling and response management**
 
 ---
