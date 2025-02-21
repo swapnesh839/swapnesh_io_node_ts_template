@@ -9,73 +9,168 @@
       rel="stylesheet"
     />
     <style>
+      :root {
+        --primary-color: #238636;
+        --primary-hover: #2ea043;
+        --text-color: #24292f;
+        --bg-color: #ffffff;
+        --card-bg: #f6f8fa;
+        --border-color: #d0d7de;
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+        --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      
       body {
-        background-color: #121212;
-        color: #fff;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       }
-      .bg-dark-subtle {
-        background-color: rgba(255, 255, 255, 0.1) !important;
+
+      .bg-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-sm);
+        transition: all 0.2s ease;
       }
-      .text-highlight {
-        color: #00ff00;
+
+      .bg-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .sponsor-btn {
+        background-color: var(--primary-color);
+        color: white;
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .sponsor-btn:hover {
+        background-color: var(--primary-hover);
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .sponsor-btn-outline {
+        color: var(--primary-color);
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        transition: all 0.2s ease;
+      }
+
+      .sponsor-btn-outline:hover {
+        color: white;
+        background-color: var(--primary-color);
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+        border: 3px solid white;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav-link {
+        color: var(--text-color) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-color) !important;
+      }
+
+      .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .btn-group-cta {
+        gap: 1rem;
+      }
+
+      .section-divider {
+        height: 1px;
+        background: var(--border-color);
+        margin: 2rem 0;
       }
     </style>
   </head>
   <body class="d-flex h-100 text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">Node.js + TypeScript</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <!-- <a class="nav-link active  text-white" aria-current="page" href="#">Home</a> -->
+      <header class="mb-5">
+        <div class="d-flex justify-content-between align-items-center">
+          <h3 class="mb-0 fw-bold">Node.js + TypeScript</h3>
+          <nav class="nav nav-masthead justify-content-center">
             <a
-              class="nav-link text-white"
+              class="nav-link"
               href="https://nodejs.org/en/docs/"
               target="_blank"
-              >Node.js Docs</a
+              >Docs</a
             >
             <a
-              class="nav-link text-white"
+              class="nav-link"
               href="https://www.typescriptlang.org/docs/"
               target="_blank"
-              >TypeScript Docs</a
+              >TypeScript</a
+            >
+            <a
+              class="nav-link sponsor-btn-outline rounded-pill px-4 ms-2"
+              href="https://github.com/sponsors/swapnesh839"
+              target="_blank"
+              >❤️ Sponsor</a
             >
           </nav>
         </div>
       </header>
 
       <main class="px-3">
-        <h1 class="display-3 mb-4">
-          🚀 Your Node.js + TypeScript Template is Ready!
+        <img
+          src="https://avatars.githubusercontent.com/u/131942441?v=4"
+          alt="Profile"
+          class="profile-img"
+        />
+        <h1 class="display-4 mb-3 fw-bold">
+          🚀 Node.js + TypeScript Template
         </h1>
-        <p class="lead mb-4">
+        <p class="lead mb-5 text-muted">
           Start building amazing applications with the power of Node.js and the
           type safety of TypeScript.
         </p>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <div class="p-3 bg-dark-subtle rounded">
-                <h4>TypeScript</h4>
-                <p>
+
+        <div class="container mb-5">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="p-4 bg-card rounded-4 h-100">
+                <div class="feature-icon">⚡</div>
+                <h4 class="fw-bold">TypeScript</h4>
+                <p class="mb-0 text-muted">
                   Enhance your JavaScript with static types and powerful
                   tooling.
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="p-3 bg-dark-subtle rounded">
-                <h4>Node.js</h4>
-                <p>
+            <div class="col-md-4">
+              <div class="p-4 bg-card rounded-4 h-100">
+                <div class="feature-icon">🚀</div>
+                <h4 class="fw-bold">Node.js</h4>
+                <p class="mb-0 text-muted">
                   Build scalable network applications using JavaScript on the
                   server-side.
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="p-3 bg-dark-subtle rounded">
-                <h4>npm</h4>
-                <p>
+            <div class="col-md-4">
+              <div class="p-4 bg-card rounded-4 h-100">
+                <div class="feature-icon">📦</div>
+                <h4 class="fw-bold">npm</h4>
+                <p class="mb-0 text-muted">
                   Access a vast ecosystem of packages to accelerate your
                   development.
                 </p>
@@ -83,21 +178,37 @@
             </div>
           </div>
         </div>
-        <p class="lead mt-4">
-          <a
-            href="#"
-            class="btn btn-lg btn-light fw-bold border-white bg-white text-dark"
-            >Start Exploring</a
-          >
-        </p>
+
+        <div class="section-divider"></div>
+
+        <div class="py-5">
+          <h2 class="fw-bold mb-4">Support This Project</h2>
+          <div class="d-flex justify-content-center btn-group-cta">
+            <a
+              href="https://github.com/sponsors/swapnesh839"
+              class="btn btn-lg sponsor-btn rounded-pill px-5 fw-bold"
+              target="_blank"
+              >❤️ Become a Sponsor</a
+            >
+            <a
+              href="https://github.com/swapnesh839"
+              class="btn btn-lg sponsor-btn-outline rounded-pill px-5 fw-bold"
+              target="_blank"
+              >View on GitHub</a
+            >
+          </div>
+        </div>
       </main>
 
-      <footer class="mt-auto text-white-50">
-        <p>
-          Template created with ❤️ by
-          <a href="https://github.com/swapnesh839" class="text-white"
-            >swapnesh839</a
-          >.
+      <footer class="mt-auto text-muted">
+        <p class="mb-0">
+          Created with ❤️ by
+          <a 
+            href="https://github.com/swapnesh839" 
+            class="text-decoration-none fw-bold"
+            style="color: var(--primary-color)"
+            target="_blank"
+          >swapnesh839</a>
         </p>
       </footer>
     </div>
