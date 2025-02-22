@@ -1,6 +1,6 @@
 {
-  "name": "@swapneshio/node-ts-template",
-  "version": "1.0.0",
+  "name": "node-ts-template-trial",
+  "version": "2.3.6",
   "description": "A CLI to generate a Node.js Express TypeScript app",
   "main": "index.js",
   "type": "module",
