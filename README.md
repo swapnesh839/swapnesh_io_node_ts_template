@@ -18,6 +18,10 @@
 - Organized folder structure
 - **CLI-based project setup**
 - **AGPL-3.0 Licensed**
+- **Built-in AWS & Cloudinary Setup**
+- **Token-based authentication**
+- **Initial setup for Zod validation**
+- **Centralized error handling and response management**
 
 ---
 
@@ -115,8 +119,6 @@ yarn deploy
 ---
 
 ## 🌎 Environment Variables
-
-Rename `.env.example` to `.env` and configure your settings:
 
 ```env
 PORT=5000
