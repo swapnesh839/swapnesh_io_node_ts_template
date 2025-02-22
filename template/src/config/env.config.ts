@@ -3,7 +3,7 @@ dotenv.config();
 // these are some example env variables replace them with your own
 const envConfig = {
   NODE_ENV: process.env.NODE_ENV,
-  PORT: process.env.PORT || 5000,
+  PORT: process.env.PORT || 8000,
   DB_URI: process.env.DB_URI || "",
   JWT_SECRET: process.env.JWT_SECRET || "ddddddddddd",
   JWT_SECRET_EXPIRY: process.env.JWT_SECRET_EXPIRY || "24d",

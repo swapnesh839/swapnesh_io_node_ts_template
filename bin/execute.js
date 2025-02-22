@@ -8,7 +8,6 @@ import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs-extra";
 
-// Get current directory
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -16,7 +15,7 @@ async function createProject() {
   console.log(chalk.green("Welcome to Express.js Setup CLI 🚀"));
   const spinner = ora({
     text: chalk.blue("Downloading template..."),
-    spinner: "dots", // Keeps it animated
+    spinner: "dots", 
     color: "cyan",
   });
 
@@ -34,7 +33,7 @@ async function createProject() {
 
     console.log(chalk.blue(`\nCreating project: ${chalk.bold(projectName)}...\n`));
 
-    const repo = "https://github.com/swapnesh839/swapnesh_io_node_ts_template.git/template"; // Adjust the path if necessary
+    const repo = "https://github.com/swapnesh839/swapnesh_io_node_ts_template.git/template"; 
 
     try {
       spinner.start();
@@ -47,16 +46,17 @@ async function createProject() {
       process.exit(1);
     }
     const packageJsonPath = path.join(projectPath, "package.json");
-
+    
     if (fs.existsSync(packageJsonPath)) {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
       packageJson.name = projectName;
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     }
-
+    
     console.log(chalk.green("\nSetup complete! 🎉"));
     console.log(`\nRun the following commands:\n`);
     console.log(chalk.cyan(`cd ${projectName} && yarn && yarn dev`));
+    process.exit(0);
   } catch (error) {
     if (error.isTtyError) {
       console.error(chalk.red("Error: Prompt couldn't be rendered in this environment."));

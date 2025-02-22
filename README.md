@@ -1,6 +1,14 @@
-# @swapneshio/node-ts-template
+# node-ts-template-trial (Public Archive)
 
-A CLI tool to generate a **Node.js Express TypeScript** application with best practices.
+<div style="background-color: red; color: white; text-align: center; padding: 10px; font-weight: bold;">
+🚨 This package is now archived. This is a public archive. 🚨
+</div>
+
+
+
+🔄 **Successor:** [@scaflo/scaflo](https://www.npmjs.com/package/@scaflo/scaflo)
+
+📂 **GitHub Repository:** [swapnesh839/Scaflo](https://github.com/swapnesh839/Scaflo)
 
 ## 🚀 Features
 
@@ -10,6 +18,10 @@ A CLI tool to generate a **Node.js Express TypeScript** application with best pr
 - Organized folder structure
 - **CLI-based project setup**
 - **AGPL-3.0 Licensed**
+- **Built-in AWS & Cloudinary Setup**
+- **Token-based authentication**
+- **Initial setup for Zod validation**
+- **Centralized error handling and response management**
 
 ---
 
@@ -18,13 +30,13 @@ A CLI tool to generate a **Node.js Express TypeScript** application with best pr
 ### **Using Yarn (Recommended)**
 
 ```sh
-yarn create @swapneshio/node-ts-template my-project
+yarn create node-ts-template-trial my-project
 ```
 
 ### **Using npx**
 
 ```sh
-npx @swapneshio/node-ts-template my-project
+npx node-ts-template-trial my-project
 ```
 
 This will generate a new project inside the `my-project` folder.
@@ -36,19 +48,19 @@ You can also install the package globally and use it directly:
 #### **Using Yarn**
 
 ```sh
-yarn global add @swapneshio/node-ts-template
+yarn global add node-ts-template-trial
 ```
 
 #### **Using npm**
 
 ```sh
-npm install -g @swapneshio/node-ts-template
+npm install -g node-ts-template-trial
 ```
 
 Then create a new project with:
 
 ```sh
-@swapneshio/node-ts-template my-project
+node-ts-template-trial my-project
 ```
 
 ---
@@ -107,8 +119,6 @@ yarn deploy
 ---
 
 ## 🌎 Environment Variables
-
-Rename `.env.example` to `.env` and configure your settings:
 
 ```env
 PORT=5000

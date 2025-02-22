@@ -31,10 +31,9 @@ export const validateRequest = (schemas: {
 
       next();
     } catch (error) {
-      console.log(error);
       if (error instanceof ZodError) {
         const validationMessages = error.errors.map((err) => err.message);
-        next(new ValidationError(validationMessages));
+        next(new ValidationError(validationMessages, validationMessages[0]));
       } else {
         next(error);
       }

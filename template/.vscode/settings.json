@@ -4,7 +4,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "eslint.validate": ["javascript", "typescript"],
   "editor.codeLens": true,
   "editor.errorSquiggles": "enabled",
   "editor.quickSuggestions": {
